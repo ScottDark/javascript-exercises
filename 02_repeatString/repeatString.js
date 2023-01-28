@@ -2,10 +2,14 @@
 // So the string "hey" is being dropped in and the amount of times it is repeated.
 const repeatString = function (repeatHeyString, repeatAmount) {
   let concatStringResult = "";
-  for (let i = 0; i < repeatAmount; i++) {
-    concatStringResult += repeatHeyString;
+  if (repeatAmount < 0) {
+    return "ERROR";
+  } else {
+    for (let i = 0; i < repeatAmount; i++) {
+      concatStringResult += repeatHeyString;
+    }
+    return concatStringResult;
   }
-  return concatStringResult;
 };
 
 // Do not edit below this line
