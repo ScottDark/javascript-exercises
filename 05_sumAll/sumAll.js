@@ -6,16 +6,20 @@ const sumAll = function (getFirstNumber, getSecondNumber) {
   let max;
   let min;
 
-  if (getFirstNumber > getSecondNumber) {
-    max = getFirstNumber;
-    min = getSecondNumber;
+  if (getFirstNumber < 0 || getSecondNumber < 0) {
+    return (sumResult = "ERROR");
   } else {
-    max = getSecondNumber;
-    min = getFirstNumber;
-  }
+    if (getFirstNumber > getSecondNumber) {
+      max = getFirstNumber;
+      min = getSecondNumber;
+    } else {
+      max = getSecondNumber;
+      min = getFirstNumber;
+    }
 
-  sumResult = ((max - min + 1) * (min + max)) / 2;
-  return sumResult;
+    sumResult = ((max - min + 1) * (min + max)) / 2;
+    return sumResult;
+  }
 };
 
 // Do not edit below this line
