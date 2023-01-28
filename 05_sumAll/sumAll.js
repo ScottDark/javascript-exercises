@@ -6,21 +6,23 @@ const sumAll = function (getFirstNumber, getSecondNumber) {
   let max;
   let min;
 
-  if (getFirstNumber < 0 || getSecondNumber < 0) {
+  if (
+    typeof getFirstNumber === "string" ||
+    typeof getSecondNumber === "string" ||
+    getFirstNumber < 0 ||
+    getSecondNumber < 0
+  ) {
     return (sumResult = "ERROR");
+  } else if (getFirstNumber > getSecondNumber) {
+    max = getFirstNumber;
+    min = getSecondNumber;
   } else {
-    if (getFirstNumber > getSecondNumber) {
-      max = getFirstNumber;
-      min = getSecondNumber;
-    } else {
-      max = getSecondNumber;
-      min = getFirstNumber;
-    }
-
-    sumResult = ((max - min + 1) * (min + max)) / 2;
-    return sumResult;
+    max = getSecondNumber;
+    min = getFirstNumber;
   }
-};
 
+  sumResult = ((max - min + 1) * (min + max)) / 2;
+  return sumResult;
+};
 // Do not edit below this line
 module.exports = sumAll;
