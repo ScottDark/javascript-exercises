@@ -1,12 +1,15 @@
 /* Returns array with removed index
- * Accepts Array & index to be removed */
-const removeFromArray = function (getArray, indexRemoved) {
-  const index = getArray.indexOf(indexRemoved);
-  if (index > -1) {
-    getArray.splice(index, 1);
+ * Accepts Array & any optional arguments as index */
+
+const removeFromArray = function (getArray, ...args) {
+  /* Returns elements not included in optional args
+   * Accepts array */
+
+  function testFunction(getArray) {
+    return !args.includes(getArray);
   }
 
-  return getArray;
+  return getArray.filter(testFunction);
 };
 
 // Do not edit below this line
