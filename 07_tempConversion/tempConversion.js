@@ -14,7 +14,15 @@ const convertToCelsius = function (convertToC) {
 /* Returns: C converted to F
  * Args: C number*/
 
-const convertToFahrenheit = function (convertToF) {};
+const convertToFahrenheit = function (convertToF) {
+  let resultFTemp;
+  let resultF;
+
+  resultFTemp = (convertToF * 9) / 5 + 32;
+  resultF = resultFTemp.toFixed(1);
+
+  return Number(resultF);
+};
 
 // Do not edit below this line
 module.exports = {
