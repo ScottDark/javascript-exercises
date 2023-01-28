@@ -1,11 +1,23 @@
-const convertToCelsius = function() {
+/* Returns: F converted to C
+ * Args: F number*/
+
+const convertToCelsius = function (convertToC) {
+  let resultCTemp;
+  let resultC;
+
+  resultCTemp = ((convertToC - 32) * 5) / 9;
+  resultC = resultCTemp.toFixed(1);
+
+  return Number(resultC);
 };
 
-const convertToFahrenheit = function() {
-};
+/* Returns: C converted to F
+ * Args: C number*/
+
+const convertToFahrenheit = function (convertToF) {};
 
 // Do not edit below this line
 module.exports = {
   convertToCelsius,
-  convertToFahrenheit
+  convertToFahrenheit,
 };
