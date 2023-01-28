@@ -9,6 +9,8 @@ const sumAll = function (getFirstNumber, getSecondNumber) {
   if (
     typeof getFirstNumber === "string" ||
     typeof getSecondNumber === "string" ||
+    isNaN(getFirstNumber) ||
+    isNaN(getSecondNumber) ||
     getFirstNumber < 0 ||
     getSecondNumber < 0
   ) {
