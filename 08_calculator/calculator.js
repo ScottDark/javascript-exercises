@@ -36,7 +36,17 @@ const power = function (powerNumberOne, powerNumberTwo) {
   return powerNumberOne ** powerNumberTwo;
 };
 
-const factorial = function () {};
+const factorial = function (factorialNumber) {
+  if (factorialNumber < 0) {
+    return "number has to be positive.";
+  }
+  if (factorialNumber == 0 || factorialNumber == 1) {
+    return 1;
+  } else {
+    let result = factorialNumber * factorial(factorialNumber - 1);
+    return result;
+  }
+};
 
 // Do not edit below this line
 module.exports = {
