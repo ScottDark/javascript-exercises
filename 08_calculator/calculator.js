@@ -6,7 +6,15 @@ const subtract = function (subtractOne, subtractTwo) {
   return subtractOne - subtractTwo;
 };
 
-const sum = function () {};
+const sum = function (sumOfNumbers) {
+  if (sumOfNumbers.length === 0) {
+    return sumOfNumbers.length;
+  } else {
+    sumOfNumbers.reduce(function (a, b) {
+      return a + b;
+    });
+  }
+};
 
 const multiply = function () {};
 
