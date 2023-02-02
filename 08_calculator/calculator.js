@@ -9,6 +9,8 @@ const subtract = function (subtractOne, subtractTwo) {
 const sum = function (sumOfNumbers) {
   if (sumOfNumbers.length === 0) {
     return sumOfNumbers.length;
+  } else if (sumOfNumbers.length === 1) {
+    return sumOfNumbers[0];
   } else {
     sumOfNumbers.reduce(function (a, b) {
       return a + b;
