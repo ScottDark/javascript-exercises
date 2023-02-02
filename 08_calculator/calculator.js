@@ -19,7 +19,18 @@ const sum = function (sumOfNumbers) {
   }
 };
 
-const multiply = function () {};
+const multiply = function (multiplyNumbers) {
+  if (multiplyNumbers.length === 0) {
+    return multiplyNumbers.length;
+  } else if (multiplyNumbers.length === 1) {
+    return multiplyNumbers[0];
+  } else {
+    let result = multiplyNumbers.reduce(function (a, b) {
+      return a * b;
+    });
+    return result;
+  }
+};
 
 const power = function () {};
 
