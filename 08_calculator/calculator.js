@@ -12,9 +12,10 @@ const sum = function (sumOfNumbers) {
   } else if (sumOfNumbers.length === 1) {
     return sumOfNumbers[0];
   } else {
-    sumOfNumbers.reduce(function (a, b) {
+    let result = sumOfNumbers.reduce(function (a, b) {
       return a + b;
     });
+    return result;
   }
 };
 
