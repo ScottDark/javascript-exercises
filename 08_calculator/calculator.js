@@ -32,7 +32,9 @@ const multiply = function (multiplyNumbers) {
   }
 };
 
-const power = function () {};
+const power = function (powerNumberOne, powerNumberTwo) {
+  return powerNumberOne ** powerNumberTwo;
+};
 
 const factorial = function () {};
 
